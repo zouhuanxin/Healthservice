@@ -1,0 +1,21 @@
+server:
+  port: 9092
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/health?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    connect-timeout: 3000
+
+
+mybatis-plus:
+  type-aliases-package: com.graduation.healthserver.domain
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+
